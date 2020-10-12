@@ -47,6 +47,7 @@ public class UnityChanController : MonoBehaviour
 		private bool isJButtonDown = false;
 		
 		
+		
         // Use this for initialization
         void Start ()
         {
@@ -65,6 +66,7 @@ public class UnityChanController : MonoBehaviour
 				
 				//シーン中のscoreTextオブジェクトを取得（追加）
 				this.scoreText = GameObject.Find("ScoreText");
+				
 				
         }
         void Update ()
@@ -92,6 +94,7 @@ public class UnityChanController : MonoBehaviour
 					//左方向への速度を代入
 					inputVelocityX = -this.velocityX;
 				}
+				
 				else if ((Input.GetKey (KeyCode.RightArrow) || this.isRButtonDown) && this.transform.position.x < this.movableRange)
 				{
 					//右方向への速度を代入
@@ -110,17 +113,18 @@ public class UnityChanController : MonoBehaviour
 				{
 					//現在のY軸の速度を代入
 					inputVelocityY = this.myRigidbody.velocity.y;
-				}	
+				}
 				
 				//Jumpステートの場合はJumpにfalseをセットする
 				if (this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName ("Jump"))
-				{	
+				{
 					this.myAnimator.SetBool ("Jump", false);
 				}
 				
 				//Unityちゃんに速度を与える
 				this.myRigidbody.velocity = new Vector3(inputVelocityX , inputVelocityY , this.velocityZ);
-				 
+				
+				
         }
 		
 		    //トリガーモードで他のオブジェクトと接触した場合の処理（追加）
@@ -132,7 +136,7 @@ public class UnityChanController : MonoBehaviour
                 {
                         this.isEnd = true;
 						
-						//stateTextにGAME OVERを表示（追加）
+						//stateTextにGAME OVERを表示
 						this.stateText.GetComponent<Text>().text = "GAME OVER";
 						
                 }
@@ -142,7 +146,7 @@ public class UnityChanController : MonoBehaviour
                 {
                         this.isEnd = true;
 						
-						//stateTextにGAME CLEARを表示（追加）
+						//stateTextにGAME CLEARを表示
 						this.stateText.GetComponent<Text>().text = "CLEAR!!";
 					
                 }
@@ -199,6 +203,5 @@ public class UnityChanController : MonoBehaviour
         {
                 this.isRButtonDown = false;
         }
-		
 		
 }
