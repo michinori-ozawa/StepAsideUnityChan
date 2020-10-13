@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6760162466502845001}
   - component: {fileID: 6510606986414507424}
   - component: {fileID: 6510606986414507431}
+  - component: {fileID: -2807520328055145998}
   m_Layer: 0
   m_Name: CoinPrefab
   m_TagString: CoinTag
@@ -139,6 +140,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414d13811c451a246aea7e9987cd9d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2807520328055145998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6240646987279300851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c819f16bdcc9af4a86dac527c92d9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 0}
+  coinPrefab: {fileID: 0}
+  conePrefab: {fileID: 0}
 --- !u!1 &7558017736318831522
 GameObject:
   m_ObjectHideFlags: 0
